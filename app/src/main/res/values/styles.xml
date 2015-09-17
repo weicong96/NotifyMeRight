@@ -5,4 +5,23 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <!-- For generic time table view-->
+    <style name="TimetableCellTheme" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@drawable/timetable_border</item>
+    </style>
+    <style name="SingleDayCellTime" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@drawable/timetable_border</item>
+    </style>
+    <style name="SingleDayCellTasks" parent="@style/SingleDayCellTime">
+        <item name="android:layout_weight">4</item>
+        <item name="android:clickable">true</item>
+    </style>
 </resources>

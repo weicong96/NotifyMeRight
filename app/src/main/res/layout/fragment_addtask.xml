@@ -26,6 +26,7 @@
                 android:inputType="text"
                 android:textSize="24sp"
                 android:fontFamily="sans-serif"
+                android:id="@+id/etTitle"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -33,9 +34,19 @@
                 android:text="@string/field_date"
                 android:textSize="22sp"
                 android:fontFamily="sans-serif"/>
-            <CalendarView
+            <DatePicker
                 android:layout_width="match_parent"
-                android:layout_height="250dp"></CalendarView>
+                android:id="@+id/cvDate"
+                android:layout_height="250dp"></DatePicker>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/field_time"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif"/>
+            <TimePicker 
+                android:layout_width="match_parent" android:id="@+id/tpTime"
+                android:layout_height="250dp"></TimePicker>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,10 +56,12 @@
 
 
             <Spinner
+                android:paddingTop="@dimen/activity_vertical_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/spPattern"
-                android:layout_weight="10" />
+                android:layout_weight="10"
+                android:entries="@array/options_repeat"/>
             </LinearLayout>
     </ScrollView>
 
