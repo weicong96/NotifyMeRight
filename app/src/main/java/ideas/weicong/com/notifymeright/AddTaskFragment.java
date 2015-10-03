@@ -1,6 +1,7 @@
 package ideas.weicong.com.notifymeright;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
@@ -57,13 +58,14 @@ public class AddTaskFragment extends Fragment {
                 task.setLng(103.22);
 
                 Calendar c = Calendar.getInstance();
-                c.set(cvDate.getYear(), cvDate.getMonth() + 1, cvDate.getDayOfMonth(), tpTime.getCurrentHour(), tpTime.getCurrentMinute());
-                task.setTime(c);
+                c.set(cvDate.getYear(), cvDate.getMonth(), cvDate.getDayOfMonth(), tpTime.getCurrentHour(), tpTime.getCurrentMinute());
+                task.setTime(c.getTime().toGMTString());
 
                 adapter.getService().createTask(task, new Callback<Task>() {
                     @Override
                     public void success(Task task, Response response) {
-                        System.out.println("Name : "+task.getName());
+                        FragmentManager fragmentManager = getFragmentManager();
+                        fragmentManager.beginTransaction().replace(R.id.content_frame, new TaskListFragment_()).addToBackStack(null).commit();
                     }
 
                     @Override

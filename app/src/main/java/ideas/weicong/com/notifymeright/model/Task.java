@@ -8,7 +8,7 @@ import java.util.Date;
  */
 public class Task {
     private String name;
-    private Calendar time;
+    private String time;
     private double lat;
     private double lng;
 
@@ -20,11 +20,11 @@ public class Task {
         this.name = name;
     }
 
-    public Calendar getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Calendar time) {
+    public void setTime(String time) {
         this.time = time;
     }
 

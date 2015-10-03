@@ -37,7 +37,9 @@
             <DatePicker
                 android:layout_width="match_parent"
                 android:id="@+id/cvDate"
-                android:layout_height="250dp"></DatePicker>
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:layout_height="wrap_content"></DatePicker>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,7 +48,8 @@
                 android:fontFamily="sans-serif"/>
             <TimePicker 
                 android:layout_width="match_parent" android:id="@+id/tpTime"
-                android:layout_height="250dp"></TimePicker>
+                android:timePickerMode="spinner"
+                android:layout_height="wrap_content"></TimePicker>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

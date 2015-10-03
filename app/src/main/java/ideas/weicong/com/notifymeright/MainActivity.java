@@ -34,7 +34,7 @@ public class MainActivity extends ActionBarActivity implements FragmentManager.O
         mDrawerTitle = mTitle = getTitle();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame,new TimeTableFragment_()).commit();
+        fragmentManager.beginTransaction().replace(R.id.content_frame,new TaskListFragment_()).commit();
 
 
         mDrawerArray = this.getResources().getStringArray(R.array.navigation_drawer_items_array);
